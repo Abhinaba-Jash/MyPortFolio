@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css
+    "
+    />
+    <link rel="stylesheet" href="../css/index_style.css" />
+  </head>
+  <body class="bg-[#0F103F] w-full">
+    <div
+      id="header"
+      class="header flex w-full justify-between pr-4 items-center"
+    >
+      <img class="h-24" src="../assets/img/logo-removebg-preview.png" alt="" />
+      <div class="flex text-white items-center gap-6">
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/projects_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Projects</span>
+            <div hidden class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/experience_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Experience</span>
+            <div hidden class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/skills_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Top Skills</span>
+            <div hidden class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/education_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Education</span>
+            <div hidden class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5" src="../assets/img/blogs_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Blogs</span>
+            <div hidden class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="switch-container">
+        <input type="checkbox" id="switch" />
+        <label for="switch">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+    </div>
+    <div id="social-icon" class="flex justify-end pr-4 gap-4">
+      <img class="cursor-pointer" src="../assets/img/github.svg" alt="" />
+      <img class="cursor-pointer" src="../assets/img/linkedin.svg" alt="" />
+      <img class="cursor-pointer" src="../assets/img/insta.svg" alt="" />
+      <img class="invert cursor-pointer" src="../assets/img/fb.png" alt="" />
+    </div>
+    <div class="relative">
+      <div
+        id="side-bar"
+        class="sidebar flex flex-col items-center justify-evenly w-12 h-96 bg-[#C3C2E6] rounded-r-3xl"
+      >
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/home_b.svg"
+              alt=""
+            />
+          </div>
+          <span hidden
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >Home</span
+          >
+        </div>
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/about_b.svg"
+              alt=""
+            />
+          </div>
+          <span hidden
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >About Me</span
+          >
+        </div>
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/contact_b.svg"
+              alt=""
+            />
+          </div>
+          <span hidden
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >Contact Me</span
+          >
+        </div>
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/favourite_b.svg"
+              alt=""
+            />
+          </div>
+          <span hidden
+            class ="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >Feedback</span
+          >
+        </div>
+      </div>
+
+      <div
+        id="mid-cont"
+        class="flex text-white left-64 gap-8 top-2 absolute items-center w-[160vh]"
+      >
+       
+
+      
+      </div>
+    </div>
+  </body>
+  <script src="../js/index_script.js"></script>
+</html>

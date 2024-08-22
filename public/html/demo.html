@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css
+    "
+    />
+    <link rel="stylesheet" href="../css/index_style.css" />
+  </head>
+  <body class="bg-[#0F103F] w-full">
+    <div
+      id="header"
+      class="header flex w-full justify-between pr-4 items-center"
+    >
+      <img class="h-24" src="../assets/img/logo-removebg-preview.png" alt="" />
+      <div class="flex text-white items-center gap-6">
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/projects_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Projects</span>
+            <div class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/experience_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Experience</span>
+            <div class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/skills_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Top Skills</span>
+            <div class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5 invert" src="../assets/img/education_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Education</span>
+            <div class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <img class="w-5" src="../assets/img/blogs_w.svg" alt="" />
+          <div class="flex flex-col gap-1">
+            <span class="head text-lg font-medium">Blogs</span>
+            <div class="underline w-full h-1 rounded-lg bg-[#2957A3]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="switch-container">
+        <input type="checkbox" id="switch" />
+        <label for="switch">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+    </div>
+    <div id="social-icon" class="flex justify-end pr-4 gap-4">
+      <img class="cursor-pointer" src="../assets/img/github.svg" alt="" />
+      <img class="cursor-pointer" src="../assets/img/linkedin.svg" alt="" />
+      <img class="cursor-pointer" src="../assets/img/insta.svg" alt="" />
+      <img class="invert cursor-pointer" src="../assets/img/fb.png" alt="" />
+    </div>
+    <div class="relative">
+      <div
+        id="side-bar"
+        class="sidebar flex flex-col items-center justify-evenly w-12 h-96 bg-[#C3C2E6] rounded-r-3xl"
+      >
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/home_b.svg"
+              alt=""
+            />
+          </div>
+          <span
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >Home</span
+          >
+        </div>
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/about_b.svg"
+              alt=""
+            />
+          </div>
+          <span
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >About Me</span
+          >
+        </div>
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/contact_b.svg"
+              alt=""
+            />
+          </div>
+          <span
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >Contact Me</span
+          >
+        </div>
+        <div class="relative">
+          <div class="flex content-center p-2 rounded-full">
+            <img
+              class="side w-5 cursor-pointer"
+              src="../assets/img/favourite_b.svg"
+              alt=""
+            />
+          </div>
+          <span
+            class="absolute -top-0.5 left-11 px-4 py-1 rounded-r-lg outline-1 bg-[#C961DE] text-white text-sm font-semibold w-fit whitespace-nowrap"
+            >Feedback</span
+          >
+        </div>
+      </div>
+
+      <div
+        id="mid-cont"
+        class="flex text-white left-64 gap-8 top-2 absolute items-center w-[160vh]"
+      >
+        <!-- <div class="rounded-full w-fit">
+          <img
+            class="rounded-full w-80"
+            src="../assets/img/my_img_demo.svg"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-4">
+          <p class="text-3xl w-[100vh] font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sunt
+            libero laudantium quaerat, pariatur, repellat voluptates soluta eos
+            exercitationem, recusandae ex quia non. Quam laboriosam deserunt
+            velit iusto, officiis ut omnis rerum sequi eaque nisi, esse
+            doloribus.
+          </p>
+          <span
+            class="w-fit hover:cursor-pointer hover:underline text-[#7ea0d7]"
+            ><a href="#">Know More</a></span
+          >
+        </div> -->
+
+        <!-- <div class="flex flex-col w-full">
+        <div class="flex">
+            <img class="h-36" src="../assets/img/contact_img.webp" alt="">
+            <div class="flex flex-col">
+            <span class="text-sm py-1 px-2 rounded-lg font-semibold w-fit h-fit bg-[#59b8e4] rounded-bl-none">Contact Me...</span>
+            <div class=" h-6  rounded-br-3xl w-3 bg-[#59b8e4]"></div>
+        </div>
+        </div>
+        <div class="flex flex-col items-center pr-44 gap-6">
+            <div class="flex gap-4 items-center bg-[#192d4b] py-2 px-4 rounded-lg w-72 justify-between">
+                <span class="text-xl">Write me on GMAIL : </span>
+                <img class="hover:cursor-pointer" src="../assets/img/gmail.svg" alt="">
+            </div>
+            <div class="flex gap-4 items-center bg-[#192d4b] py-2 rounded-lg w-72 px-4 justify-between">
+                <span class="text-xl">Connect on Linkedin : </span>
+                <img class="hover:cursor-pointer" src="../assets/img/linkedin_c.svg" alt="">
+            </div>
+            <div class="flex gap-4 items-center bg-[#192d4b] py-2 rounded-lg w-fit px-4 justify-between">
+                <span class="text-xl">Drop a message / call me : </span>
+                <div class="flex flex-col items-center gap-1">
+                <img class="invert hover:cursor-pointer w-7" src="../assets/img/copy_c.svg" alt="">
+                <span class="text-xs text-white">Copy Phone Number</span>
+            </div>
+            </div>
+        </div>
+      </div> -->
+        <!-- <div class="flex flex-col w-full">
+          <div class="flex">
+            <img class="h-36" src="../assets/img/contact_img.webp" alt="" />
+            <div class="flex flex-col">
+              <span
+                class="text-sm py-1 px-2 rounded-lg font-semibold w-fit h-fit bg-[#59b8e4] rounded-bl-none whitespace-nowrap"
+                >Send your feedback...</span
+              >
+              <div class="h-6 rounded-br-3xl w-3 bg-[#59b8e4]"></div>
+            </div>
+
+            <div class="flex flex-col items-center w-full pr-80 pt-24 gap-4">
+              <input
+                type="text"
+                class="w-72 text-lg px-4 py-1 rounded-md bg-[#192d4b] flex"
+                placeholder="Enter your name"
+              />
+              <input
+                type="text"
+                class="w-72 text-lg px-4 py-1 rounded-md bg-[#192d4b] flex"
+                placeholder="Enter your gmail"
+              />
+              <textarea
+                name="issue"
+                id="issue"
+                placeholder="Enter encountered issue (if any) / feel free to share your experience"
+                class="w-72 text-lg px-4 py-1 rounded-md bg-[#192d4b] flex"
+                rows="4"
+              ></textarea>
+              <div class="flex gap-4 self-start pl-8">
+                <span class="text-lg font-medium">Rate :</span>
+                <div class="flex">
+                  <img src="../assets/img/star_void.svg" alt="" />
+                  <img src="../assets/img/star_void.svg" alt="" />
+                  <img src="../assets/img/star_void.svg" alt="" />
+                  <img src="../assets/img/star_void.svg" alt="" />
+                  <img src="../assets/img/star_void.svg" alt="" />
+                </div>
+              </div>
+              <button
+                class="bg-[#2957A3] py-1 px-8 rounded-md text-lg mt-4 self-start ml-8 font-semibold hover:bg-[#3667b6]"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="flex flex-col w-full pt-14 gap-4">
+          <div class="flex-flex-col">
+            <div
+              class="flex bg-[#192d4b] py-2 px-4 w-[100%] rounded-md rounded-bl-none items-center gap-8 justify-between"
+            >
+              <div class="flex flex-col">
+                <span class="font-semibold text-2xl">DarpanSur</span>
+                <p class="font-medium text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque quibusdam obcaecati assumenda.
+                </p>
+                <span
+                  class="pt-2 w-fit hover:cursor-pointer hover:underline text-sm text-white"
+                  >more</span
+                >
+              </div>
+              <div class="flex">
+                <img
+                  class="hover:cursor-pointer"
+                  src="../assets/img/github.svg"
+                  alt=""
+                />
+                <div class="flex flex-col mt-8 items-center">
+                  <img
+                    class="w-8 hover:cursor-pointer"
+                    src="../assets/img/star_void.svg"
+                    alt=""
+                  />
+                  <span class="text-xs text-center"
+                    >0 <br />
+                    Endorcement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="hidden flex flex-col w-[80%] bg-[#192d4b] h-96">
+
+            </div>
+            <div class="flex gap-2 bg-white text-black w-fit py-1 px-4 items-center rounded-b-md">
+                <span class="text-sm  ">Contributors :</span>
+               <div class="flex items-center gap-2">
+                <span class="text-sm"> Prince Banerjee </span>
+                <img class="hover:cursor-pointer invert w-6" src="../assets/img/linkedin.svg" alt="">
+            </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="flex flex-col w-full pt-6 gap-10">
+          <span class="text-2xl">Internship Done : 1</span>
+          <div class="flex w-full justify-center gap-4">
+            <div
+              class="flex flex-col rounded-md bg-[#192d4b] w-60 min-h-24 items-center p-4 gap-2 relative"
+            >
+            <img class="absolute right-2 top-2 hover:cursor-pointer" src="../assets/img/linkedin.svg" alt="">
+              <img class="w-24" src="../assets/img/my_img_demo.svg" alt="" />
+              <span class="text-lg">Codsoft-Virtual Intership</span>
+              <div class="flex justify-between w-full mt-4">
+                <span class="hover:cursor-pointer hover:underline"
+                  >Know more</span
+                >
+                <span class="hover:cursor-pointer hover:underline"
+                  >Credential</span
+                >
+              </div>
+            </div>
+          </div>
+          <span class="text-2xl mt-8">Companies Worked : 0</span>
+          <div class="flex w-full justify-center gap-4">
+            <div
+              class="flex flex-col rounded-md bg-[#192d4b] w-60 min-h-24 items-center p-4 gap-2 relative"
+            >
+            <img class="absolute right-2 top-2 hover:cursor-pointer" src="../assets/img/linkedin.svg" alt="">
+              <img class="w-24" src="../assets/img/my_img_demo.svg" alt="" />
+              <span class="text-lg">Codsoft-Virtual Intership</span>
+              <div class="flex justify-between w-full mt-4">
+                <span class="hover:cursor-pointer hover:underline"
+                  >Know more</span
+                >
+                <span class="hover:cursor-pointer hover:underline"
+                  >Credential</span
+                >
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- 
+        <div class="flex-col w-full pt-12 gap-4">
+          <div class="flex flex-col gap-2 capsule bg-[#192d4b] pb-2 rounded-b-3xl">
+            <div class="flex w-[90%] bg-orange-500 h-[6px]"></div>
+            <div class="flex px-2 gap-4 items-center  justify-between">
+              <div class="flex  items-center gap-2">
+              <img class="w-16" src="../assets/img/my_img_demo.svg" alt="" />
+              <div class="flex flex-col">
+                <span class="text-lg">Hyper Text Markup Language (HTML)</span>
+                <span class="text-sm">Expertise : 90%</span>
+              </div>
+            </div>
+              <div class="flex flex-col items-center pr-2">
+                <img class="w-8" src="../assets/img/star_void.svg" alt="">
+                <span class="text-center text-xs">0<br>Endorcement</span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="flex flex-col w-full pt-10 pl-24 gap-11 relative">
+          <div class="flex items-center gap-4">
+            <div
+              class="bubble w-6 h-6 bg-gradient-to-b from-[#192d4b] to-[#C961DE] rounded-full"
+            ></div>
+            <div class="flex flex-col">
+              <span class="text-xl"
+                >University institute of technology - Burdwan</span
+              >
+              <div class="flex justify-between">
+                <span>Course : B.E</span>
+                <span>Current Semester : 5</span>
+              </div>
+              <span>S.G.P.A : 9.09</span>
+            </div>
+            <div class="flex flex-col items-center ml-4">
+              <img
+                class="w-6 hover:cursor-pointer"
+                src="../assets/img/document.svg"
+                alt=""
+              />
+         
+            </div>
+          </div>
+
+          <div
+            class="line h-36 w-2 bg-gradient-to-t from-[#192d4b] to-[#C961DE] absolute ml-2 mt-12"
+          ></div>
+
+          <div class="flex"></div>
+          <div class="flex items-center gap-4">
+            <div
+              class="bubble w-6 h-6 bg-gradient-to-b from-[#192d4b] to-[#C961DE] rounded-full"
+            ></div>
+            <div class="flex flex-col">
+              <span class="text-xl">Aushnara High School</span>
+              <div class="flex justify-between">
+                <span>Course : H.S</span>
+              </div>
+              <span>Percentage : 94%</span>
+            </div>
+            <div class="flex flex-col items-center ml-4">
+              <img
+                class="w-6 hover:cursor-pointer"
+                src="../assets/img/document.svg"
+                alt=""
+              />
+         
+            </div>
+          </div>
+          <div
+            class="line h-36 w-2 bg-gradient-to-t from-[#192d4b] to-[#C961DE] absolute ml-2 mt-[212px]"
+          ></div>
+
+          <div class="flex items-center gap-4 mt-11">
+            <div
+              class="bubble w-6 h-6 bg-gradient-to-b from-[#192d4b] to-[#C961DE] rounded-full"
+            ></div>
+            <div class="flex flex-col">
+              <span class="text-xl">Aushnara High School</span>
+              <div class="flex justify-between">
+                <span>Course : Secondary</span>
+              </div>
+              <span>Percentage : 91%</span>
+            </div>
+            <div class="flex flex-col items-center ml-4">
+              <img
+                class="w-6 hover:cursor-pointer"
+                src="../assets/img/document.svg"
+                alt=""
+              />
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

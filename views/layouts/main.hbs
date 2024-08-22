@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{{title}}}</title>
+    <link rel="shortcut icon" href="./fevicon.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css
+    "
+    />
+    <link rel="stylesheet" href="../css/index_style.css" />
+  </head>
+  <body class="bg-[#0F103F] w-full pb-8">
+    {{>header}}
+    {{>social_icon}}
+    <div class="relative">
+      {{>sidebar}}
+      {{{body}}}
+    </div>
+  </body>
+ <script id="backend-data" type="application/json">
+        {{{data}}}
+    </script>
+  <script src="../js/index_script.js"></script>
+
+</html>

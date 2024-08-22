@@ -1,0 +1,57 @@
+<div
+  id="mid-cont"
+  data-x={{{current_page_id}}}
+  data-location={{{current_page_loaction}}}
+  class="flex text-white left-64 gap-8 top-2 absolute items-center w-[160vh] pb-8"
+>
+
+  <div class="flex flex-col w-full">
+    <div class="flex">
+      <img class="h-36" src="../assets/img/contact_img.webp" alt="" />
+      <div class="flex flex-col">
+        <span
+          class="text-sm py-1 px-2 rounded-lg font-semibold w-fit h-fit bg-[#59b8e4] rounded-bl-none whitespace-nowrap"
+        >Send your feedback...</span>
+        <div class="h-6 rounded-br-3xl w-3 bg-[#59b8e4]"></div>
+      </div>
+
+      <form class="flex flex-col items-center w-full pr-80 pt-24 gap-4" action="/feedback" method="post">
+        <input
+        id="name"
+          type="text"
+          class="w-72 text-lg px-4 py-1 rounded-md bg-[#192d4b] flex"
+          placeholder="Enter your name" required
+        />
+        <input required
+        id="email"
+          type="text"
+          class="w-72 text-lg px-4 py-1 rounded-md bg-[#192d4b] flex"
+          placeholder="Enter your gmail"
+        />
+        <textarea required
+          name="issue"
+          id="issue"
+          placeholder="Enter encountered issue (if any) / feel free to share your experience"
+          class="w-72 text-lg px-4 py-1 rounded-md bg-[#192d4b] flex"
+          rows="4"
+        ></textarea>
+        <div class="flex gap-4 self-start pl-8">
+          <span class="text-lg font-medium">Rate :</span>
+                <div class="flex" id="rating-div">
+                  <img data-star="1-star" src="../assets/img/star_void.svg" alt="" />
+                  <img data-star="2-star" src="../assets/img/star_void.svg" alt="" />
+                  <img data-star="3-star" src="../assets/img/star_void.svg" alt="" />
+                  <img data-star="4-star" src="../assets/img/star_void.svg" alt="" />
+                  <img data-star="5-star" src="../assets/img/star_void.svg" alt="" />
+                </div>
+          
+        </div>
+        <button id="send-feedback-btn"
+          class="bg-[#2957A3] py-1 px-8 rounded-md text-lg mt-4 self-start ml-8 font-semibold hover:bg-[#3667b6]" 
+        >
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

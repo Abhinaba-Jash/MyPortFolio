@@ -1,0 +1,199 @@
+.sphere {
+    display: flex;
+    width: 100%;
+  }
+
+  .animation-wrapper {
+    width: 100%;
+    padding-bottom: 50%;
+    padding-top: 50%;
+  }
+
+  .sphere-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 580px;
+    height: 580px;
+    border-radius: 580px;
+    margin: -290px 0 0 -290px;
+
+  }
+
+  .sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(80, 80, 80, 0.35);
+    backface-visibility: hidden;
+  }
+
+  @media (min-width: 500px) {
+    .sphere path {
+      stroke-width: 0.4px;
+    }
+  }
+
+  label {
+    display: flex;
+    width: 75px;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    background: #222;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+  }
+  label i {
+    font-size: 18px;
+  }
+  label .fa-sun {
+    color: gold;
+    transition: 0.8s;
+  }
+  label .fa-moon {
+    color: #fff;
+    transition: 0.8s;
+  }
+  label .ball {
+    display: none;
+  }
+  input:checked + label .fa-sun {
+    transform: translateX(-43px);
+  }
+  input:checked + label .fa-moon {
+    transform: translateX(43px);
+  }
+  label .fa-sun {
+    opacity: 1;
+  }
+  input:checked + label .fa-sun {
+    opacity: 1;
+  }
+  label .fa-moon {
+    opacity: 1;
+  }
+  input:checked + label .fa-moon {
+    opacity: 1;
+  }
+  label .ball {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 5px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  input:checked + label .ball {
+    transform: translateX(40px);
+  }
+  label .fa-moon {
+    transform: translateX(43px);
+  }
+  input:checked + label .fa-moon {
+    transform: translateX(0);
+  }
+  label {
+    transition: 0.3s;
+  }
+  input:checked + label {
+    background: #c0c0c0;
+  }
+  input:checked + label .ball {
+    background: #222;
+  }
+  input {
+    display: none;
+  }
+  input:checked + label .fa-sun {
+    transform: translateX(0px) rotate(160deg);
+  }
+  label .fa-moon {
+    transform: translateX(0px) rotate(360deg);
+  }
+  input:checked + label .fa-moon {
+    transform: translateX(0), rotate(0);
+  }
+
+
+@keyframes showHeader {
+    0% {
+        opacity: 0;
+        /* transform: translate(-50%, 0); */
+        transition: opacity 0.5s;
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-10%);
+        transition: transform 0.5s;
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-15%);
+        transition: transform 1.5s;
+
+    }
+}
+@keyframes showSidebar {
+    0% {
+        opacity: 0;
+        /* transform: translate(-50%, 0); */
+        transition: opacity 0.5s;
+    }
+    20% {
+        opacity: 1;
+        left: 50%;
+
+    }
+    100% {
+        opacity: 1;
+        left: 0%;
+
+    }
+}
+@keyframes showIcons {
+    0% {
+        opacity: 0;
+        /* transform: translate(-50%, 0); */
+        transition: opacity 0.5s;
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(10%);
+        transition: transform 0.5s;
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(250%);
+        transition: transform 1.5s;
+
+    }
+}
+@keyframes showMidCont {
+  0%{
+    opacity: 0;
+    transition: opacity 1.0s;
+  }
+  100%{
+    opacity: 2;
+  }
+  
+}
+#header.animate {
+    animation: showHeader 2s forwards;
+}
+#side-bar.animate {
+    animation: showSidebar 2s forwards;
+}
+#social-icon.animate {
+    animation: showIcons 2s forwards;
+}
+#mid-cont.animate{
+  animation: showMidCont 1s forwards;
+}
